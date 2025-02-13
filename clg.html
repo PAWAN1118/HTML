@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Menu</title>
+    <style>
+
+body, html {
+        margin: 0;
+        padding: 0;
+        height: 50%;
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 45vh;
+        overflow: hidden;
+        background-color:brown; 
+    }
+
+    .image-container img {
+        height: 100%;
+        width: auto; 
+    }
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: #002b5c; 
+            color: white;
+            padding-top: 5px;
+            position: fixed;
+            font-family: Arial, sans-serif;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .sidebar a:hover {
+            background-color: #004080;
+        }
+
+        .dropdown-container {
+            display: none;
+            background-color: #003366;
+            padding-left: 20px;
+        }
+        .sidebar a:hover + .dropdown-container,
+        .dropdown-container:hover {
+            display: block;
+        }
+
+        .dropdown-container a {
+            font-size: 14px;
+            padding: 10px 20px;
+        }
+        
+        img { 
+            width: 400px;
+            position: relative;
+            bottom: 100px; 
+        }
+        div { 
+            background-color: lightgreen;
+            margin-bottom: 100px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="image-container">
+        <img src="https://cse.anits.edu.in/headercse.jpg" alt="ANITS Banner">
+    </div>
+
+
+    <div class="sidebar">
+        <h3 class="text-center" style="text-align: center; padding-bottom: 10px;">CSE</h3>
+        <a href="https://cse.anits.edu.in/homepage.php">Department Profile</a>
+        <div class="dropdown-container">
+            <a href="#">Overview</a>
+            <a href="#">Vision & Mission</a>
+        </div>
+
+        <a href="#">Department Events</a>
+        <div class="dropdown-container">
+            <a href="#">Workshops</a>
+            <a href="#">Seminars</a>
+        </div>
+
+        <a href="#">Board of Studies</a>
+        <a href="#">Academic Details</a>
+        <a href="#">MoU's/CoE's</a>
+        <a href="#">FDP Organized</a>
+        <a href="#">Placement Details</a>
+        <a href="#">Faculty</a>
+        <div class="dropdown-container">
+            <a href="#">Faculty List</a>
+            <a href="#">Research</a>
+        </div>
+
+        <a href="#">Student</a>
+        <div class="dropdown-container">
+            <a href="#">Student Achievements</a>
+            <a href="#">Projects</a>
+        </div>
+
+        <a href="#">Career Growth Development Program</a>
+        <a href="#">IIC Details</a>
+    </div>
+   
+</body>
+</html>

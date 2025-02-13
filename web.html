@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANITS CSE Department</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #0073e6;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .header img {
+            width: 100%;
+            height: auto;
+        }
+
+        .navbar {
+            display: flex;
+            background-color: #002b5c;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            background-color: #004080;
+        }
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: #002b5c;
+            color: white;
+            position: fixed;
+            padding-top: 20px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .sidebar a:hover {
+            background-color: #004080;
+        }
+        .sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 4px;
+        }
+
+        .sidebar::-webkit-scrollbar-track {
+            background: #002b5c;
+        }
+
+        .dropdown-container {
+            display: none;
+            background-color: #003366;
+            padding-left: 20px;
+        }
+        .sidebar a:hover + .dropdown-container,
+        .dropdown-container:hover {
+            display: block;
+        }
+
+        .main-content {
+            margin-left: 260px;
+            padding: 20px;
+        }
+
+        .announcement {
+            background-color: #f1f1f1;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 5px solid #0073e6;
+        }
+
+        @media screen and (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+            .main-content {
+                margin-left: 210px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="https://www.anits.edu.in/images/banner.jpg" alt="ANITS Banner">
+    </div>
+
+
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Admissions</a>
+        <a href="#">Achievements</a>
+        <a href="#">Departments</a>
+        <a href="#">R & D Cell</a>
+        <a href="#">Training & Placements</a>
+        <a href="#">Library</a>
+        <a href="#">Facilities</a>
+        <a href="#">Contact Us</a>
+    </div>
+
+    <div class="sidebar">
+        <h3 style="text-align: center; padding-bottom: 10px;">CSE</h3>
+
+        <a href="#">Department Profile</a>
+        <div class="dropdown-container">
+            <a href="#">Overview</a>
+            <a href="#">Vision & Mission</a>
+        </div>
+
+        <a href="#">Department Events</a>
+        <div class="dropdown-container">
+            <a href="#">Workshops</a>
+            <a href="#">Seminars</a>
+        </div>
+
+        <a href="#">Board of Studies</a>
+        <a href="#">Academic Details</a>
+        <a href="#">MoU's/CoE's</a>
+        <a href="#">FDP Organized</a>
+        <a href="#">Placement Details</a>
+
+        <a href="#">Faculty</a>
+        <div class="dropdown-container">
+            <a href="#">Faculty List</a>
+            <a href="#">Research</a>
+        </div>
+
+        <a href="#">Student</a>
+        <div class="dropdown-container">
+            <a href="#">Student Achievements</a>
+            <a href="#">Projects</a>
+        </div>
+
+        <a href="#">Career Growth Development Program</a>
+        <a href="#">IIC Details</a>
+    </div>
+
+    <div class="main-content">
+        <h2>Latest Announcements</h2>
+
+        <div class="announcement">
+            <p><strong>Hackathon Event:</strong> Register now for the upcoming coding competition.</p>
+        </div>
+
+        <div class="announcement">
+            <p><strong>Placement Drive:</strong> Infosys and TCS are hiring fresh graduates. Apply now!</p>
+        </div>
+        <div class="announcement">
+            <p><strong>Guest Lecture:</strong> Join us for a seminar on Artificial Intelligence this Friday.</p>
+        </div>
+    </div>
+
+</body>
+</html>
